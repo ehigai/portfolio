@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ehigai — Logo Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Dancing+Script:wght@700&family=Parisienne&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f5f4f0;
+      font-family: system-ui, sans-serif;
+      min-height: 100vh;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    h1 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #999;
+      font-weight: 500;
+    }
+    .variants {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 32px 40px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .card.dark {
+      background: #0d0d14;
+    }
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #bbb;
+      width: 100px;
+      flex-shrink: 0;
+    }
+    .card.dark .label { color: #444; }
+
+    /* ── Variant A: Pinyon Script — closest to the photo's elegant cursive ── */
+    .logo-a {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 72px;
+      color: #111;
+      line-height: 1;
+      position: relative;
+      display: inline-block;
+    }
+    .logo-a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 88%;
+      height: 1.5px;
+      background: linear-gradient(90deg, #111 0%, #111 75%, transparent 100%);
+      border-radius: 2px;
+      opacity: 0.5;
+    }
+
+    /* ── Variant B: Great Vibes — even more flowing ── */
+    .logo-b {
+      font-family: 'Great Vibes', cursive;
+      font-size: 78px;
+      color: #0d0d14;
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+
+    /* ── Variant C: Dark background version ── */
+    .logo-c {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 72px;
+      color: #f0ece4;
+      line-height: 1;
+      position: relative;
+      display: inline-block;
+    }
+    .logo-c::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 90%;
+      height: 1.5px;
+      background: linear-gradient(90deg, #f0ece4 0%, #f0ece4 70%, transparent 100%);
+      opacity: 0.4;
+      border-radius: 2px;
+    }
+
+    /* ── Variant D: Parisienne — more ornate capital ── */
+    .logo-d {
+      font-family: 'Parisienne', cursive;
+      font-size: 70px;
+      color: #111;
+      line-height: 1;
+    }
+
+    /* ── Variant E: SVG inline path-based logo ── */
+    .logo-svg {
+      max-width: 360px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ehigai — logo variants</h1>
+
+  <div class="variants">
+
+    <!-- A: Pinyon Script light -->
+    <div class="card">
+      <span class="label">Pinyon Script<br>Light bg</span>
+      <span class="logo-a">ehigai</span>
+    </div>
+
+    <!-- B: Great Vibes -->
+    <div class="card">
+      <span class="label">Great Vibes<br>Light bg</span>
+      <span class="logo-b">ehigai</span>
+    </div>
+
+    <!-- C: Pinyon Script dark -->
+    <div class="card dark">
+      <span class="label">Pinyon Script<br>Dark bg</span>
+      <span class="logo-c">ehigai</span>
+    </div>
+
+    <!-- D: Parisienne -->
+    <div class="card">
+      <span class="label">Parisienne<br>Light bg</span>
+      <span class="logo-d">ehigai</span>
+    </div>
+
+    <!-- E: Custom SVG paths -->
+    <div class="card">
+      <span class="label">Custom SVG<br>Paths</span>
+      <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" fill="none" aria-label="ehigai logo">
+        <defs>
+          <linearGradient id="inkGrad2" x1="0%" y1="0%" x2="60%" y2="100%">
+            <stop offset="0%" stop-color="#0d0d14"/>
+            <stop offset="100%" stop-color="#2a2a3e"/>
+          </linearGradient>
+          <filter id="inkShadow2">
+            <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-color="#000" flood-opacity="0.15"/>
+          </filter>
+        </defs>
+        <g filter="url(#inkShadow2)" stroke="url(#inkGrad2)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M 20,65 Q 16,62 18,57 Q 20,48 30,46 Q 42,44 46,54 Q 50,64 44,72 Q 38,80 28,78 Q 20,76 20,68 Q 20,62 28,61 Q 38,60 46,63" stroke-width="3.2"/>
+          <path d="M 46,63 Q 50,61 52,58" stroke-width="2.4"/>
+          <path d="M 52,58 L 52,24" stroke-width="3.4"/>
+          <path d="M 52,56 Q 58,46 66,46 Q 74,46 76,55 L 76,78" stroke-width="3.2"/>
+          <path d="M 76,78 Q 78,75 82,73" stroke-width="2.4"/>
+          <path d="M 82,73 L 82,78" stroke-width="3.2"/>
+          <circle cx="83" cy="45" r="3.2" fill="url(#inkGrad2)" stroke="none"/>
+          <path d="M 82,78 Q 86,75 90,73" stroke-width="2.4"/>
+          <path d="M 90,73 Q 96,64 106,64 Q 118,64 120,73 Q 122,83 114,89 Q 106,95 98,91 Q 90,87 90,79 Q 90,72 96,70 Q 104,68 112,71" stroke-width="3.2"/>
+          <path d="M 112,71 L 112,100 Q 112,114 102,116 Q 92,118 89,109 Q 87,103 92,100" stroke-width="3.0"/>
+          <path d="M 114,71 Q 120,68 126,66" stroke-width="2.4"/>
+          <path d="M 126,66 Q 132,58 142,60 Q 152,62 152,72 Q 152,82 142,86 Q 132,88 128,81 Q 124,74 128,70 Q 134,65 144,67" stroke-width="3.2"/>
+          <path d="M 152,66 L 152,82" stroke-width="3.2"/>
+          <path d="M 152,78 Q 156,76 160,74" stroke-width="2.4"/>
+          <path d="M 160,74 L 160,82" stroke-width="3.2"/>
+          <circle cx="161" cy="46" r="3.2" fill="url(#inkGrad2)" stroke="none"/>
+          <path d="M 160,82 Q 168,85 176,82" stroke-width="2.0"/>
+        </g>
+        <path d="M 14,96 C 50,90 110,88 160,89 C 195,90 220,93 240,90 C 252,88 255,84 248,82" stroke="url(#inkGrad2)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.55"/>
+      </svg>
+    </div>
+
+  </div>
+
+</body>
+</html>

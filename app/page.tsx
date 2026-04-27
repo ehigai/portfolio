@@ -1,18 +1,43 @@
-import { Button } from "@/components/ui/button"
+import { Mail } from "lucide-react"
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <div className="mx-auto max-w-2xl px-6 pt-40">
+      <h1 className="mb-8 text-4xl font-bold tracking-tight">
+        Ehigai Salvation
+      </h1>
+      <div className="prose space-y-6 text-lg opacity-80">
+        <p>
+          Hey! I&apos;m Ehigai Salvation, a{" "}
+          <span className="border-b border-muted font-mono text-base">
+            web sorcerer
+          </span>{" "}
+          and{" "}
+          <span className="border-b border-muted font-mono text-base">
+            system alchemist
+          </span>
+          .
+        </p>
+        <p>
+          I spend my days architecting ethereal systems and weaving
+          high-performance web structures. I'm obsessed with the intersection of{" "}
+          <span className="italic">minimalist aesthetics</span> and{" "}
+          <span className="italic">maximalist performance</span>.
+        </p>
+        <p>
+          Currently obsessing over memory-safe languages, zero-cost
+          abstractions, and how to make the web feel like magic again.
+        </p>
+      </div>
+
+      <div className="mt-16 flex space-x-6">
+        <a
+          href="#"
+          className="flex items-center space-x-2 font-mono text-sm opacity-60 transition-opacity hover:opacity-100"
+        >
+          <Mail className="h-4 w-4" />
+          <span>summon@sorcerer.me</span>
+        </a>
       </div>
     </div>
   )
