@@ -1,4 +1,12 @@
+import type { Metadata } from "next"
 import { PROJECTS } from "@/lib/data"
+
+export const metadata: Metadata = {
+  title: "Artifacts",
+  description:
+    "Things I've built — open-source tools, experiments, and systems. Crafted with intent.",
+}
+
 
 export default function Projects() {
   return (

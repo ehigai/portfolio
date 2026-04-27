@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Geist, Geist_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
@@ -13,8 +14,44 @@ const fontMono = Geist_Mono({
   variable: "--font-mono",
 })
 
-export const metadata = {
-  title: "ehigai",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://ehigai.dev"),
+  title: {
+    default: "ehigai",
+    template: "%s · ehigai",
+  },
+  description:
+    "Ehigai Salvation — web sorcerer and system alchemist. Building performant, minimal, and intentional software.",
+  keywords: [
+    "ehigai",
+    "web developer",
+    "software engineer",
+    "portfolio",
+    "frontend",
+    "full-stack",
+  ],
+  authors: [{ name: "Ehigai Salvation" }],
+  creator: "Ehigai Salvation",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ehigai.dev",
+    siteName: "ehigai",
+    title: "ehigai — web sorcerer & system alchemist",
+    description:
+      "Building performant, minimal, and intentional software. Obsessed with minimalist aesthetics and maximalist performance.",
+  },
+  twitter: {
+    card: "summary",
+    title: "ehigai — web sorcerer & system alchemist",
+    description:
+      "Building performant, minimal, and intentional software.",
+    creator: "@ehigai",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({

@@ -1,6 +1,13 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Rss } from "lucide-react"
 import { POSTS } from "@/lib/data"
+
+export const metadata: Metadata = {
+  title: "Thoughts",
+  description:
+    "Writing on software craft, system design, minimalism, and whatever else I'm obsessing over.",
+}
 
 export default function Blog() {
   return (

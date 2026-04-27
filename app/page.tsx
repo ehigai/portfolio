@@ -1,4 +1,10 @@
+import type { Metadata } from "next"
 import { Mail } from "lucide-react"
+
+export const metadata: Metadata = {
+  description:
+    "Hey, I'm Ehigai Salvation — a web sorcerer and system alchemist obsessed with minimalist aesthetics and maximalist performance.",
+}
 
 export default function Home() {
   return (
