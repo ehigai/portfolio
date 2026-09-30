@@ -26,7 +26,7 @@ export default function Home() {
         </p>
         <p>
           I spend my days architecting ethereal systems and weaving
-          high-performance web structures. I'm obsessed with the intersection of{" "}
+          high-performance web structures. I&apos;m obsessed with the intersection of{" "}
           <span className="italic">minimalist aesthetics</span> and{" "}
           <span className="italic">maximalist performance</span>.
         </p>

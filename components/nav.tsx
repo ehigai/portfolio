@@ -3,23 +3,25 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Sun, Moon } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useSyncExternalStore } from "react"
+import { useTheme } from "next-themes"
 import { cn } from "@/lib/utils"
 
+const emptySubscribe = () => () => {}
+
 export function Nav() {
-  const [isDark, setIsDark] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  )
   const pathname = usePathname()
 
-  useEffect(() => {
-    const isDarkGlobal = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches
-    setIsDark(isDarkGlobal)
-  }, [])
+  const isDark = mounted && resolvedTheme === "dark"
 
   const toggleTheme = () => {
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle("dark")
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
   }
 
   return (

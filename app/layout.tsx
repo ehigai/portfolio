@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Geist_Mono, Inter, Parisienne } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -12,6 +12,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+})
+
+const parisienne = Parisienne({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-logo",
 })
 
 export const metadata: Metadata = {
@@ -67,21 +73,10 @@ export default function RootLayout({
         "antialiased",
         fontMono.variable,
         "font-sans",
-        inter.variable
+        inter.variable,
+        parisienne.variable
       )}
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body>
         <ThemeProvider>
           <div className="relative min-h-screen overflow-x-hidden transition-colors duration-500">

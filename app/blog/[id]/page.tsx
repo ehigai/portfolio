@@ -37,7 +37,7 @@ export default async function PostView({
         </p>
         <p>
           The excerpt for this thought was:{" "}
-          <span className="italic">"{post.excerpt}"</span>
+          <span className="italic">&ldquo;{post.excerpt}&rdquo;</span>
         </p>
         <p>
           As we delve deeper into the system internals, we find that the
