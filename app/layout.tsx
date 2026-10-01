@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ehigai.dev",
+    url: "https://stoicdev.cc",
     siteName: "ehigai",
     title: "ehigai — web sorcerer & system alchemist",
     description:
@@ -80,11 +80,11 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <TooltipProvider>
-            <div className="relative min-h-screen overflow-x-hidden transition-colors duration-500">
-              <div className="dot-background fixed inset-0 z-0" />
+            <div className="relative flex w-full flex-col items-center justify-between overflow-x-hidden transition-colors duration-500 md:flex">
+              {/* <div className="dot-background fixed inset-0 z-0" /> */}
               <Nav />
-              <main className="relative z-10 pb-32">{children}</main>
-              <footer className="relative z-10 mx-auto flex max-w-2xl items-center justify-between border-t border-black/5 px-6 py-16 font-mono text-xs opacity-40 dark:border-white/5">
+              <main className="w-full flex-1 border">{children}</main>
+              <footer className="mx-auto flex max-w-2xl justify-between px-6 py-16 font-mono text-xs opacity-40 lg:items-center dark:border-white/5">
                 <span>{new Date().getFullYear().toString()} © ehigai</span>
                 <div className="flex items-center space-x-1">
                   <span>Built with</span>
