@@ -3,8 +3,9 @@ import { Mail } from "lucide-react"
 import { Tooltip } from "@/components/ui/tooltip"
 import { TooltipContent, TooltipTrigger } from "radix-ui/tooltip"
 import { Button } from "@/components/ui/button"
-import { technologies } from "./canstants"
-import TechnologyCard from "@/components/TechnologyCard"
+import { projects, technologies } from "./canstants"
+import ProjectCard from "@/components/ProjectCard"
+import TechnologyList from "@/components/TechnologyList"
 
 export const metadata: Metadata = {
   description:
@@ -54,19 +55,25 @@ export default function Home() {
       </div>
 
       {/* Technologies Section */}
-      <div className="mx-auto w-full px-4 md:w-fit md:px-0">
+      <section className="mx-auto mb-40 w-full max-w-7xl px-4 md:px-6">
         <h2 className="my-6 font-mono text-2xl font-bold md:my-8 md:text-3xl">
           Current Stack
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap md:items-center md:justify-center">
-          {technologies.map((technology) => (
-            <TechnologyCard
-              key={technology.name + technology.type}
-              {...technology}
-            />
+
+        <TechnologyList defaultIndex={0} technologies={technologies} />
+      </section>
+
+      {/* Projects Section */}
+      <section className="mx-auto w-full max-w-7xl px-4 md:px-6">
+        <h2 className="my-6 font-mono text-2xl font-bold md:my-8 md:text-3xl">
+          Projects
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
           ))}
         </div>
-      </div>
+      </section>
     </>
   )
 }
