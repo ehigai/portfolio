@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import { Mail } from "lucide-react"
+import { Tooltip } from "@/components/ui/tooltip"
+import { TooltipContent, TooltipTrigger } from "radix-ui/tooltip"
 
 export const metadata: Metadata = {
   description:
@@ -9,34 +11,32 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="mx-auto max-w-2xl px-6 pt-40">
-      <h1 className="mb-8 text-4xl font-bold tracking-tight">
+      <span className="border-muted font-mono text-base">
+        Hello there, I&apos;m
+      </span>
+      <h1 className="mt-2 mb-4 text-4xl font-bold tracking-tight">
         Ehigai Salvation
       </h1>
       <div className="prose space-y-6 text-lg opacity-80">
         <p>
-          Hey! I&apos;m Ehigai Salvation, a{" "}
-          <span className="border-b border-muted font-mono text-base">
-            web sorcerer
-          </span>{" "}
-          and{" "}
-          <span className="border-b border-muted font-mono text-base">
-            system alchemist
-          </span>
-          .
+          <span className="font-mono text-base">Software Developer</span> in{" "}
+          <span className="font-mono text-base">Nigeria</span>.
         </p>
         <p>
-          I spend my days architecting ethereal systems and weaving
-          high-performance web structures. I&apos;m obsessed with the intersection of{" "}
-          <span className="italic">minimalist aesthetics</span> and{" "}
-          <span className="italic">maximalist performance</span>.
-        </p>
-        <p>
-          Currently obsessing over memory-safe languages, zero-cost
-          abstractions, and how to make the web feel like magic again.
+          I build robust TypeScript backends and high-performance{" "}
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="cursor-help border-b border-dotted border-primary">
+                CLI
+              </span>
+            </TooltipTrigger>
+            <TooltipContent>Command Line Interface</TooltipContent>
+          </Tooltip>{" "}
+          applications with Go. Passionate about open-source communities,
+          modular architecture, and shipping tools that work.
         </p>
       </div>
-
-      <div className="mt-16 flex space-x-6">
+      {/* <div className="mt-16 flex space-x-6">
         <a
           href="#"
           className="flex items-center space-x-2 font-mono text-sm opacity-60 transition-opacity hover:opacity-100"
@@ -44,7 +44,7 @@ export default function Home() {
           <Mail className="h-4 w-4" />
           <span>summon@sorcerer.me</span>
         </a>
-      </div>
+      </div> */}
     </div>
   )
 }
