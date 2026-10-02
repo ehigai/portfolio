@@ -9,7 +9,7 @@ import TechnologyList from "@/components/TechnologyList"
 
 export const metadata: Metadata = {
   description:
-    "Hey, I'm Ehigai Salvation — a web sorcerer and system alchemist obsessed with minimalist aesthetics and maximalist performance.",
+    "Hey, I'm Ehigai Salvation. I build robust TypeScript backends and high-performance CLI applications.",
 }
 
 export default function Home() {
