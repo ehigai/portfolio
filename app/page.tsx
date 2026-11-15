@@ -9,7 +9,7 @@ import TechnologyList from "@/components/TechnologyList"
 
 export const metadata: Metadata = {
   description:
-    "Hey, I'm Ehigai Salvation. I build robust TypeScript backends and high-performance CLI applications.",
+    "Hi there, I'm Ehigai Salvation. I build robust TypeScript backends and high-performance CLI applications.",
 }
 
 export default function Home() {
@@ -24,21 +24,25 @@ export default function Home() {
         </h1>
         <div className="prose space-y-6 text-lg opacity-80">
           <p>
-            <span className="font-mono text-base">Software Developer</span> in{" "}
-            <span className="font-mono text-base">Nigeria</span>.
+            <span className="font-mono text-base">
+              Software &amp; Electrical Systems Engineer
+            </span>{" "}
           </p>
           <p>
-            I build robust TypeScript backends and high-performance{" "}
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <span className="cursor-help border-b border-dotted border-primary">
-                  CLI
-                </span>
-              </TooltipTrigger>
-              <TooltipContent>Command Line Interface</TooltipContent>
-            </Tooltip>{" "}
-            applications with Go. Passionate about open-source communities,
-            modular architecture, and shipping tools that work.
+            I engineer reliable TypeScript backends, high-performance Go{" "}
+            <span>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <span className="cursor-help border-b border-dotted border-primary">
+                    CLI
+                  </span>
+                </TooltipTrigger>
+                <TooltipContent>Command Line Interface</TooltipContent>
+              </Tooltip>
+            </span>{" "}
+            tools, and integrated embedded systems. Passionate about bridging
+            hardware with scalable software, modular architecture, and shipping
+            tools that work.
           </p>
           <div className="flex w-full gap-4 lg:justify-center">
             <Button>View Projects</Button>

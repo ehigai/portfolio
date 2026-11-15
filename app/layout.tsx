@@ -1,12 +1,14 @@
+import "./globals.css"
+
 import type { Metadata } from "next"
 import { Geist_Mono, Inter, Parisienne } from "next/font/google"
 
-import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import { Nav } from "@/components/nav"
 import { Coffee } from "lucide-react"
 import { TooltipProvider } from "radix-ui/tooltip"
+import { domainUrl, metadataDescription } from "./canstants"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -22,37 +24,39 @@ const parisienne = Parisienne({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ehigai.dev"),
+  metadataBase: new URL(domainUrl),
   title: {
-    default: "ehigai",
-    template: "%s · ehigai",
+    default: "Ehigai Salvation",
+    template: "%s · Ehigai Salvation",
   },
-  description:
-    "Ehigai Salvation — web sorcerer and system alchemist. Building performant, minimal, and intentional software.",
+  description: metadataDescription,
   keywords: [
     "ehigai",
+    "ehigai salvation",
     "web developer",
     "software engineer",
+    "software developer",
     "portfolio",
     "frontend",
     "full-stack",
+    "stoicdev",
+    "stoic dev",
   ],
   authors: [{ name: "Ehigai Salvation" }],
   creator: "Ehigai Salvation",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://stoicdev.cc",
-    siteName: "ehigai",
-    title: "ehigai — web sorcerer & system alchemist",
-    description:
-      "Building performant, minimal, and intentional software. Obsessed with minimalist aesthetics and maximalist performance.",
+    url: domainUrl,
+    siteName: "Ehigai Salvation",
+    title: "Ehigai Salvation — Software Developer",
+    description: metadataDescription,
   },
   twitter: {
     card: "summary",
-    title: "ehigai — web sorcerer & system alchemist",
-    description: "Building performant, minimal, and intentional software.",
-    creator: "@ehigai",
+    title: "Ehigai Salvation — Software Developer",
+    description: metadataDescription,
+    creator: "@ehigaisalvation",
   },
   robots: {
     index: true,
