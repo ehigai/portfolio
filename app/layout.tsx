@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { Nav } from "@/components/nav"
 import { Coffee } from "lucide-react"
 import { TooltipProvider } from "radix-ui/tooltip"
-import { domainUrl, metadataDescription } from "./canstants"
+import { domainUrl, metadataDescription } from "@/lib/data"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 

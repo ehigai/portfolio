@@ -3,7 +3,7 @@ import { Mail } from "lucide-react"
 import { Tooltip } from "@/components/ui/tooltip"
 import { TooltipContent, TooltipTrigger } from "radix-ui/tooltip"
 import { Button } from "@/components/ui/button"
-import { projects, technologies } from "./canstants"
+import { projects, technologies } from "@/lib/data"
 import ProjectCard from "@/components/ProjectCard"
 import TechnologyList from "@/components/TechnologyList"
 
